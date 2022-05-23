@@ -1,8 +1,10 @@
 module.exports = {
-  exportPathMap: function() {
-    return {
-      '/': { page: '/' },
-      '/rama': { page: '/public/drops/' }
-    }
-  }
+  rewrites: async () => {
+    return [
+      {
+        source: "/",
+        destination: "/index.html",
+      }
+    ]
+}
 }
